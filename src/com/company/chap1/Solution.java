@@ -1,6 +1,7 @@
 package com.company.chap1;
 
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class Solution {
     public String solution(String[] par, String[] com){
@@ -18,11 +19,35 @@ public class Solution {
         return par[i];
     }
 
+    public String solutionHash(String[] par, String[] com){
+        String answer = "";
+        // 1. Hash Map을 만든다.
+        HashMap<String, Integer> map = new HashMap<>();
+        for (String player : par){
+            map.put(player, map.getOrDefault(player, 0) + 1);
+        }
+
+        // 2. Hash Map을 뺀다.
+        for (String player:com){
+            map.put(player, map.get(player) - 1);
+        }
+        // 3. value가 0이 아닌 마지막 주자를 찾는다.
+        for (String key : map.keySet()){
+            if(map.get(key) != 0){
+                answer = key;
+                break;
+            }
+        }
+        return answer;
+    }
+
     public static void main(String[] args) {
         String[] participant = {"bbb", "aaa", "ccc"};
         String[] completion = {"bbb", "aaa"};
         Solution solution = new Solution();
         String ans = solution.solution(participant, completion);
         System.out.println("answer : " + ans);
+        solution.solutionHash(participant, completion);
+
     }
 }
