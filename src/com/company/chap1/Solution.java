@@ -2,6 +2,8 @@ package com.company.chap1;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 public class Solution {
     public String solution(String[] par, String[] com){
@@ -38,6 +40,16 @@ public class Solution {
                 break;
             }
         }
+        // entrySet을 이용한 방법
+        Iterator<Map.Entry<String, Integer>> iter = map.entrySet().iterator();
+        while(iter.hasNext()){
+            Map.Entry<String, Integer> entry = iter.next();
+            if(entry.getValue() != 0){
+                answer = entry.getKey();
+                break;
+            }
+        }
+
         return answer;
     }
 
