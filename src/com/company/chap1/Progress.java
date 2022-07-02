@@ -1,6 +1,7 @@
 package com.company.chap1;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Progress {
@@ -31,6 +32,9 @@ public class Progress {
     }
 
     public static void main(String[] args) {
-
+        int[]   prgresses = {93, 30, 55};
+        int[]   speeds = {1, 30, 5};
+        Progress progress = new Progress();
+        System.out.println(Arrays.toString(progress.solution(prgresses, speeds)));
     }
 }
