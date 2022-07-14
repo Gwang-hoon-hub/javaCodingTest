@@ -1,4 +1,4 @@
-package com.company.dataStructure;
+package com.company.dataStructure.linkedList;
 
 class Node<T> {
     private T data;

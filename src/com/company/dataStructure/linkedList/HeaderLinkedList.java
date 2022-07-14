@@ -1,4 +1,4 @@
-package com.company.dataStructure;
+package com.company.dataStructure.linkedList;
 
 public class HeaderLinkedList<T> {
     Node header;    // 헤더는 데이터가 없고 시작을 알리는 부분이다.
