@@ -33,13 +33,13 @@ public class Solution{
 
         }
 
-        // 3. notifyListHash 를 기반으로 이메일을 보낼 reportHash 만들기
-
+        // 3. notifyListHash를 기반으로 이메일을 보낼 reportHash 만들기
         HashMap<String, Integer> reporterHash = new HashMap<>();
         for(ArrayList<String> notifyList : notifyHash.values())
             if(notifyList.size() >= k)
                 for(String reporter : notifyList)
                     reporterHash.put(reporter, reporterHash.getOrDefault(reporter, 0) + 1);
+
         // 4. reportHash 를 기반으로 answer 배열을 채우기
         for(int i =0; i<id_list.length; i++)
             answer[i] = reporterHash.getOrDefault(id_list[i],0);
@@ -56,3 +56,4 @@ public class Solution{
         sol.solution(id_list, reprot, k);
     }
 }
+
