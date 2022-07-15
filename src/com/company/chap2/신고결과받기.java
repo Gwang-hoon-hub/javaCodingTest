@@ -25,7 +25,7 @@ public class Solution{
             String reportee = rep.substring(blankIdx+1);
 
             // notifyHash 에서 reportee가 있다면 해당 배열을 갖고 오고 그렇지 않으면 null을 갖고온다.
-            ArrayList<String> reporterList =notifyHash.getOrDefault(reportee,null);
+            ArrayList<String> reporterList = notifyHash.getOrDefault(reportee,null);
             if(reporterList == null)
                 reporterList = new ArrayList<>();
             reporterList.add(reporter);
@@ -48,9 +48,11 @@ public class Solution{
 
     public static void main(String[] args) {
         Solution sol = new Solution();
-        String[] id_list = {"muzi", "frodo", "apeach", "neo"};
-        String[] reprot = {"muzi frodo","apeach frodo","frodo neo","muzi neo","apeach muzi"};
-        int k = 2;
+//        String[] id_list = {"muzi", "frodo", "apeach", "neo"};
+        String[] id_list = {"con", "ryan"};
+//        String[] reprot = {"muzi frodo","apeach frodo","frodo neo","muzi neo","apeach muzi"};
+        String[] reprot = {"ryan con", "ryan con", "ryan con", "ryan con"};
+        int k = 3;
         sol.solution(id_list, reprot, k);
     }
 }
