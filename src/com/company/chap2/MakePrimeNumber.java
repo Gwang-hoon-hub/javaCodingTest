@@ -1,8 +1,11 @@
 package com.company.chap2;
 // https://school.programmers.co.kr/learn/courses/30/lessons/12977
 // 소수 만들기
+import java.util.Scanner;
 
 public class MakePrimeNumber {
+
+    String arr = "sd";
     class Solution{
         public int solution(int[] nums){
             int answer = 0;
@@ -22,5 +25,7 @@ public class MakePrimeNumber {
             }
             return true;
         }
+
+
     }
 }
