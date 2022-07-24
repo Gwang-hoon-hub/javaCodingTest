@@ -2,6 +2,7 @@ package com.company.chap2;
 
 // 키패드 누르기
 // https://school.programmers.co.kr/learn/courses/30/lessons/67256
+
 public class PressKeyboards {
     Position left;
     Position right;
