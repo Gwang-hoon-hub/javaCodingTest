@@ -12,13 +12,15 @@ import java.util.HashSet;
 import java.util.List;
 
 public class Greedy1 {
-    HashSet<Integer> reserveSet = new HashSet<>();
-    HashSet<Integer> lostSet = new HashSet<>();
+
 
     public int SetSolution(int n, int[] lost, int[] reserve){
         int answer = 0;
 
         // set을 생성한다.
+        HashSet<Integer> reserveSet = new HashSet<>();
+        HashSet<Integer> lostSet = new HashSet<>();
+
         for(int reserveN : reserve)
             reserveSet.add(reserveN);
         for(int lostN : lost){
